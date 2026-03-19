@@ -7,5 +7,4 @@ import com.alekhya.dto.RegistrationResponse;
 
 public interface IUserService {
     RegistrationResponse registerUser(RegistrationRequest request);
-    LoginResponse loginUser(LoginRequest request);
 }
