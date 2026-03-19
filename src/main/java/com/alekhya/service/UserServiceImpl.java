@@ -1,10 +1,7 @@
 package com.alekhya.service;
 
-import com.alekhya.dto.LoginRequest;
-import com.alekhya.dto.LoginResponse;
 import com.alekhya.dto.RegistrationRequest;
 import com.alekhya.dto.RegistrationResponse;
-import com.alekhya.exception.InvalidCredentialsException;
 import com.alekhya.exception.UserAlreadyExistsException;
 import com.alekhya.model.User;
 import com.alekhya.repository.UserRepository;
@@ -24,7 +21,6 @@ public class UserServiceImpl implements IUserService{
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-
 
     @Override
     public RegistrationResponse registerUser(RegistrationRequest request) {

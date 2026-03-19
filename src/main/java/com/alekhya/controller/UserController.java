@@ -1,7 +1,5 @@
 package com.alekhya.controller;
 
-import com.alekhya.dto.LoginRequest;
-import com.alekhya.dto.LoginResponse;
 import com.alekhya.dto.RegistrationRequest;
 import com.alekhya.dto.RegistrationResponse;
 import com.alekhya.service.UserServiceImpl;
@@ -25,15 +23,4 @@ public class UserController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
-
-    @PostMapping("/login")
-    public ResponseEntity<?> loginUser(LoginRequest request){
-        try{
-            LoginResponse response = userService.loginUser(request);
-            return new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.UNAUTHORIZED);
-        }
-    }
-
 }
