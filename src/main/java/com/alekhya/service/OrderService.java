@@ -82,6 +82,7 @@ public class OrderService {
 
         // clear cart
         cart.getItems().clear();
+        cart.setTotalPrice(0.0);
         cartRepository.save(cart);
 
         // return response
